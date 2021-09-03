@@ -1,0 +1,75 @@
+* {
+  font-family: "Bebas Neue", cursive;
+}
+
+h1 {
+  text-align: center;
+}
+
+/*Navigation*/
+.bg-dark {
+  background-color: #f72585 !important;
+}
+
+.navbar-brand {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+  font-size: 3em;
+  margin: 0 0.5em;
+}
+
+.navbar-brand:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+}
+
+.nav-link {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  font-size: 2em;
+}
+
+.nav-link:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+}
+
+/*Content*/
+body {
+  background-color: #f72585;
+}
+
+#landing {
+  background-image: url("./media/land.png");
+  height: 95vh;
+  color: white;
+}
+
+#landing h1 {
+  text-shadow: 2px 2px 5px black;
+  font-size: 5em;
+  margin-top: 3em;
+}
+
+#landing p {
+  text-shadow: 2px 2px 5px black;
+  font-size: 3em;
+  text-align: center;
+}
+
+#landing .land-img-box {
+  padding: 0;
+}
+
+#landing .land-img-box img {
+  width: 100%;
+}
+
+#feature iframe {
+  border-radius: 10px;
+  display: block;
+  margin: auto auto;
+}
+/*# sourceMappingURL=styles.css.map */

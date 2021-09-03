@@ -1,0 +1,73 @@
+@mixin borderRadius {
+  border-radius: 10px;
+}
+@mixin boxShadow {
+  box-shadow: 12px 12px 10px black;
+}
+@mixin smoothTranstion {
+  transition: all 0.1s ease-in-out;
+  &:hover {
+    transform: scale(120%);
+  }
+}
+@mixin textShadow {
+  text-shadow: 2px 2px 5px black;
+}
+
+* {
+  font-family: "Bebas Neue", cursive;
+}
+
+h1 {
+  text-align: center;
+}
+
+/*Navigation*/
+.bg-dark {
+  background-color: #f72585 !important;
+}
+.navbar-brand {
+  @include smoothTranstion();
+  transform: scale(110%);
+  font-size: 3em;
+  margin: 0 0.5em;
+}
+.nav-link {
+  @include smoothTranstion();
+  font-size: 2em;
+}
+
+/*Content*/
+body {
+  background-color: #f72585;
+}
+
+#landing {
+  background-image: url("./media/land.png");
+  height: 95vh;
+  color: white;
+  h1 {
+    @include textShadow();
+    font-size: 5em;
+    margin-top: 3em;
+  }
+  p {
+    @include textShadow();
+    font-size: 3em;
+    text-align: center;
+  }
+  .land-img-box {
+    padding: 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+#feature {
+  iframe {
+    @include borderRadius();
+    display: block;
+    margin: auto auto;
+  }
+}
