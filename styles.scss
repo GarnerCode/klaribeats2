@@ -4,21 +4,25 @@
 @mixin boxShadow {
   box-shadow: 12px 12px 10px black;
 }
+@mixin purpleBoxShadow {
+  box-shadow: 10px 10px 0px #560bad;
+}
 @mixin smoothTranstion {
   transition: all 0.1s ease-in-out;
-  &:hover {
-    transform: scale(120%);
-  }
 }
 @mixin textShadow {
   text-shadow: 2px 2px 5px black;
+}
+@mixin purpleTextShadow {
+  text-shadow: 5px 5px 0px #560bad;
 }
 
 * {
   font-family: "Bebas Neue", cursive;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -28,13 +32,23 @@ h1 {
 }
 .navbar-brand {
   @include smoothTranstion();
+  @include purpleTextShadow();
   transform: scale(110%);
   font-size: 3em;
   margin: 0 0.5em;
+  &:hover {
+    @include purpleTextShadow();
+    transform: scale(120%);
+  }
 }
 .nav-link {
   @include smoothTranstion();
   font-size: 2em;
+  &:hover {
+    @include purpleTextShadow();
+    transform: scale(120%);
+    color: rgba(255, 255, 255, 1) !important;
+  }
 }
 
 /*Content*/
@@ -56,6 +70,19 @@ body {
     font-size: 3em;
     text-align: center;
   }
+  button {
+    @include borderRadius();
+    @include smoothTranstion();
+    border: none;
+    background-color: #4cc9f0;
+    font-size: 3em;
+    padding: 0.5em;
+    &:hover {
+      @include purpleBoxShadow();
+      transform: scale(110%);
+      color: white;
+    }
+  }
   .land-img-box {
     padding: 0;
     img {
@@ -64,10 +91,32 @@ body {
   }
 }
 
+.wave {
+  padding: 0;
+}
+
 #feature {
+  background-color: #4cc9f0;
+  padding-bottom: 2em;
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 3em;
+  }
   iframe {
     @include borderRadius();
     display: block;
     margin: auto auto;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 2em;
+  padding-top: 2em;
+  background-color: #4cc9f0;
+  p {
+    margin: 0;
   }
 }

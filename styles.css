@@ -2,7 +2,8 @@
   font-family: "Bebas Neue", cursive;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -14,6 +15,7 @@ h1 {
 .navbar-brand {
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  text-shadow: 5px 5px 0px #560bad;
   -webkit-transform: scale(110%);
           transform: scale(110%);
   font-size: 3em;
@@ -21,6 +23,7 @@ h1 {
 }
 
 .navbar-brand:hover {
+  text-shadow: 5px 5px 0px #560bad;
   -webkit-transform: scale(120%);
           transform: scale(120%);
 }
@@ -32,8 +35,10 @@ h1 {
 }
 
 .nav-link:hover {
+  text-shadow: 5px 5px 0px #560bad;
   -webkit-transform: scale(120%);
           transform: scale(120%);
+  color: white !important;
 }
 
 /*Content*/
@@ -59,6 +64,24 @@ body {
   text-align: center;
 }
 
+#landing button {
+  border-radius: 10px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border: none;
+  background-color: #4cc9f0;
+  font-size: 3em;
+  padding: 0.5em;
+}
+
+#landing button:hover {
+  -webkit-box-shadow: 10px 10px 0px #560bad;
+          box-shadow: 10px 10px 0px #560bad;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+  color: white;
+}
+
 #landing .land-img-box {
   padding: 0;
 }
@@ -67,9 +90,37 @@ body {
   width: 100%;
 }
 
+.wave {
+  padding: 0;
+}
+
+#feature {
+  background-color: #4cc9f0;
+  padding-bottom: 2em;
+}
+
+#feature h1 {
+  font-size: 4em;
+}
+
+#feature h2 {
+  font-size: 3em;
+}
+
 #feature iframe {
   border-radius: 10px;
   display: block;
   margin: auto auto;
+}
+
+footer {
+  text-align: center;
+  font-size: 2em;
+  padding-top: 2em;
+  background-color: #4cc9f0;
+}
+
+footer p {
+  margin: 0;
 }
 /*# sourceMappingURL=styles.css.map */
