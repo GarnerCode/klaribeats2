@@ -26,6 +26,32 @@ h2 {
   text-align: center;
 }
 
+hr {
+  opacity: 100%;
+  border: 0;
+  height: 1px;
+  background: #4cc9f0;
+  background-image: linear-gradient(to right, #f72585, #4cc9f0, #f72585);
+}
+
+button {
+  @include borderRadius();
+  @include smoothTranstion();
+  border: none;
+  background-color: #4cc9f0;
+  font-size: 3em;
+  padding: 0.5em;
+  &:hover {
+    @include purpleBoxShadow();
+    transform: scale(110%);
+    color: white;
+  }
+}
+
+.wave {
+  padding: 0;
+}
+
 /*Navigation*/
 .bg-dark {
   background-color: #f72585 !important;
@@ -57,9 +83,9 @@ body {
 }
 
 #landing {
-  background-image: url("./media/land.png");
   height: 95vh;
   color: white;
+  text-align: center;
   h1 {
     @include textShadow();
     font-size: 5em;
@@ -70,29 +96,12 @@ body {
     font-size: 3em;
     text-align: center;
   }
-  button {
-    @include borderRadius();
-    @include smoothTranstion();
-    border: none;
-    background-color: #4cc9f0;
-    font-size: 3em;
-    padding: 0.5em;
-    &:hover {
-      @include purpleBoxShadow();
-      transform: scale(110%);
-      color: white;
-    }
-  }
   .land-img-box {
     padding: 0;
     img {
       width: 100%;
     }
   }
-}
-
-.wave {
-  padding: 0;
 }
 
 #feature {
@@ -111,6 +120,28 @@ body {
   }
 }
 
+#about {
+  color: white;
+  text-align: center;
+  img {
+    display: block;
+    margin: auto auto;
+  }
+  h1 {
+    @include purpleTextShadow();
+    font-size: 5em;
+  }
+  p {
+    @include textShadow();
+    text-align: justify;
+    font-size: 3em;
+    padding: 1em;
+  }
+  button {
+    margin: 1em;
+  }
+}
+
 footer {
   text-align: center;
   font-size: 2em;
@@ -118,5 +149,112 @@ footer {
   background-color: #4cc9f0;
   p {
     margin: 0;
+    font-size: 0.5em;
+    color: #f72585;
+  }
+  a {
+    color: #f72585;
+    margin: 1em;
+    &:hover {
+      @include smoothTranstion();
+      @include purpleTextShadow();
+      color: white;
+      transform: scale(110%);
+    }
+  }
+}
+
+/*Media Queries */
+
+/*Small Devices*/
+@media only screen and (max-width: 420px) {
+  #landing {
+    background-image: url("./media/rodger-full.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 110vh;
+    h1 {
+      margin-top: 0;
+      font-size: 2em;
+      margin-top: 4em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+    button {
+      font-size: 1.5em;
+    }
+    .land-img-box {
+      display: none;
+    }
+  }
+
+  #about {
+    background-image: url("./media/rodger-about.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    .about-img-box {
+      display: none;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.5em;
+      margin-top: 10em;
+    }
+    button {
+      font-size: 1.5em;
+    }
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+/*Tablets*/
+@media only screen and (max-width: 770px) {
+  #landing {
+    background-image: url("./media/rodger-full.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    h1 {
+      margin-top: 0;
+      font-size: 3em;
+      margin-top: 10em;
+    }
+    p {
+      font-size: 2em;
+    }
+    button {
+      font-size: 1.5em;
+    }
+    .land-img-box {
+      display: none;
+    }
+  }
+
+  #about {
+    background-image: url("./media/rodger-about.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 130vh;
+    .about-img-box {
+      display: none;
+    }
+    h1 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 2em;
+      margin-top: 15em;
+    }
+    button {
+      font-size: 1.5em;
+    }
+  }
+  iframe {
+    width: 80%;
   }
 }

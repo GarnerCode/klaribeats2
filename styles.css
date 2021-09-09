@@ -7,6 +7,37 @@ h2 {
   text-align: center;
 }
 
+hr {
+  opacity: 100%;
+  border: 0;
+  height: 1px;
+  background: #4cc9f0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f72585), color-stop(#4cc9f0), to(#f72585));
+  background-image: linear-gradient(to right, #f72585, #4cc9f0, #f72585);
+}
+
+button {
+  border-radius: 10px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  border: none;
+  background-color: #4cc9f0;
+  font-size: 3em;
+  padding: 0.5em;
+}
+
+button:hover {
+  -webkit-box-shadow: 10px 10px 0px #560bad;
+          box-shadow: 10px 10px 0px #560bad;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+  color: white;
+}
+
+.wave {
+  padding: 0;
+}
+
 /*Navigation*/
 .bg-dark {
   background-color: #f72585 !important;
@@ -47,9 +78,9 @@ body {
 }
 
 #landing {
-  background-image: url("./media/land.png");
   height: 95vh;
   color: white;
+  text-align: center;
 }
 
 #landing h1 {
@@ -64,34 +95,12 @@ body {
   text-align: center;
 }
 
-#landing button {
-  border-radius: 10px;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-  border: none;
-  background-color: #4cc9f0;
-  font-size: 3em;
-  padding: 0.5em;
-}
-
-#landing button:hover {
-  -webkit-box-shadow: 10px 10px 0px #560bad;
-          box-shadow: 10px 10px 0px #560bad;
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
-  color: white;
-}
-
 #landing .land-img-box {
   padding: 0;
 }
 
 #landing .land-img-box img {
   width: 100%;
-}
-
-.wave {
-  padding: 0;
 }
 
 #feature {
@@ -113,6 +122,32 @@ body {
   margin: auto auto;
 }
 
+#about {
+  color: white;
+  text-align: center;
+}
+
+#about img {
+  display: block;
+  margin: auto auto;
+}
+
+#about h1 {
+  text-shadow: 5px 5px 0px #560bad;
+  font-size: 5em;
+}
+
+#about p {
+  text-shadow: 2px 2px 5px black;
+  text-align: justify;
+  font-size: 3em;
+  padding: 1em;
+}
+
+#about button {
+  margin: 1em;
+}
+
 footer {
   text-align: center;
   font-size: 2em;
@@ -122,5 +157,113 @@ footer {
 
 footer p {
   margin: 0;
+  font-size: 0.5em;
+  color: #f72585;
+}
+
+footer a {
+  color: #f72585;
+  margin: 1em;
+}
+
+footer a:hover {
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  text-shadow: 5px 5px 0px #560bad;
+  color: white;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+}
+
+/*Media Queries */
+/*Small Devices*/
+@media only screen and (max-width: 420px) {
+  #landing {
+    background-image: url("./media/rodger-full.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 110vh;
+  }
+  #landing h1 {
+    margin-top: 0;
+    font-size: 2em;
+    margin-top: 4em;
+  }
+  #landing p {
+    font-size: 1.5em;
+  }
+  #landing button {
+    font-size: 1.5em;
+  }
+  #landing .land-img-box {
+    display: none;
+  }
+  #about {
+    background-image: url("./media/rodger-about.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  #about .about-img-box {
+    display: none;
+  }
+  #about h1 {
+    font-size: 2em;
+  }
+  #about p {
+    font-size: 1.5em;
+    margin-top: 10em;
+  }
+  #about button {
+    font-size: 1.5em;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+/*Tablets*/
+@media only screen and (max-width: 770px) {
+  #landing {
+    background-image: url("./media/rodger-full.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  #landing h1 {
+    margin-top: 0;
+    font-size: 3em;
+    margin-top: 10em;
+  }
+  #landing p {
+    font-size: 2em;
+  }
+  #landing button {
+    font-size: 1.5em;
+  }
+  #landing .land-img-box {
+    display: none;
+  }
+  #about {
+    background-image: url("./media/rodger-about.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 130vh;
+  }
+  #about .about-img-box {
+    display: none;
+  }
+  #about h1 {
+    font-size: 3em;
+  }
+  #about p {
+    font-size: 2em;
+    margin-top: 15em;
+  }
+  #about button {
+    font-size: 1.5em;
+  }
+  iframe {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
